@@ -4,25 +4,22 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Followers from "./Followers";
+import Navbar from "./NavBar.jsx";
 
 
 const SearchUser = () => {
   const [filtered, setFiltered] = useState('')
   // console.log(person);
 
-
-
   const handleChange = (e) => {
     const inputValue = e.target.value.toLowerCase();
     setFiltered(inputValue)
 
   }
-  
-
-  
 
   return (
     <div>
+      <Navbar />
       <Form inline>
         <Row className="w-50 m-auto p-3">
           <Col xs="auto">
